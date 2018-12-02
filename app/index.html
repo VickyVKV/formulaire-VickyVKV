@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Formulaire Bootstrap</title>
+	<link href="css/jquery-ui.css" rel="stylesheet" type="text/css">
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h1>Bienvenue</h1>	
+<div class="form">
+      <ul class="tab-group">
+        <li class="tab active"><a href="#signup">S'enregistrer</a></li>
+        <li class="tab"><a href="#login">Connexion</a></li>
+      </ul>
+    <div class="tab-content">     
+	<div id="signup">
+<form id="form">
+<div class="top-row">
+          <div class="field-wrap">
+            <label>
+                Prénom<span class="req">*</span>
+              </label>
+            <input type="text" data-validetta="required" />
+          </div>
+
+          <div class="field-wrap">
+            <label>
+                Nom<span class="req">*</span>
+              </label>
+            <input type="text" data-validetta="required" />
+          </div>
+        </div>
+          <div class="field-wrap">
+            <label>
+                Date de naissance<span class="req">*</span>
+              </label>
+            <input type="text" id="datepicker" data-validetta="required">
+          </div>
+          
+          <div class="field-wrap">
+          <label> 
+          Adresse : code postal </label>
+          <input id="cp"> <input id="ville">
+           </div>
+
+        <div class="field-wrap">
+          <label>
+              Addresse mail<span class="req" >*</span>
+            </label>
+          <input data-validetta="required,email" />
+        </div>
+
+        <div class="field-wrap">
+          <label>
+              Mot de passe<span class="req">*</span>
+            </label>
+          <input type="password"/>
+        </div>
+        <button type="submit" class="button button-block">Enregistrer</button>
+
+      </form> <!--form signup-->
+
+    </div>
+
+    <div id="login">
+      <h1>Ravi de vous revoir</h1>
+
+      <form action="/" method="post">
+
+        <div class="field-wrap">
+          <label>
+              Adresse mail<span class="req">*</span>
+            </label>
+          <input  data-validetta="required,email" />
+        </div>
+
+        <div class="field-wrap">
+          <label>
+              Mot de passe<span class="req" data-validetta="required,minLength[5],maxLength[15]">*</span>
+            </label>
+          <input data-validetta="required"/>
+        </div>
+
+        <p class="forgot"><a href="#">Oublier le mot de passe?</a></p>
+
+        <button class="button button-block">Connexion</button>
+
+      </form> <!--form login -->
+
+    </div>
+
+  </div>
+  <!-- tab-content -->
+
+</div>
+<!-- /form -->
+	
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/validetta.min.js"></script>
+<script src="js/validettaLang-fr-FR.js"></script>
+<script src="js/script.js"></script>	
+</body>
+</html>
